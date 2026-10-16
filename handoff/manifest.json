@@ -2,9 +2,9 @@
   "schema_version": 1,
   "dataset_id": "mark-handoff-c3852d063983",
   "fixture": true,
-  "generated_at": "2026-10-16T02:51:40.300700Z",
-  "latest_sequence": 2,
-  "latest_marker": "MARK-P01-48e523fc030a:B2",
+  "generated_at": "2026-10-16T03:00:48.422Z",
+  "latest_sequence": 3,
+  "latest_marker": "MARK-P01-48e523fc030a:B3",
   "coverage": "4 complete upstream documents; test-only cognition",
   "batches": [
     {
@@ -18,6 +18,12 @@
       "marker": "MARK-P01-48e523fc030a:B2",
       "path": "handoff/changes/0002.json",
       "sha256": "55ea948375d1316019a5aa8ccc9c5fe6955ad4b6690aafe676112c9d60176dc8"
+    },
+    {
+      "sequence": 3,
+      "marker": "MARK-P01-48e523fc030a:B3",
+      "path": "handoff/changes/0003.json",
+      "sha256": "d4734b735132f694414e4a36bbc66ff80cc01a3e3fa9aaeeaac772bcd3fc69e0"
     }
   ],
   "files": [
