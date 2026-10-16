@@ -1,0 +1,12 @@
+{
+  "schema_version": 1,
+  "consumer": "chatgpt_native",
+  "dataset_id": "mark-handoff-c3852d063983",
+  "processed_through_sequence": 3,
+  "processed_through_marker": "MARK-P01-48e523fc030a:B3",
+  "observed_commit_sha": "25a5d30b427a7be6211e902e73651f0f4b49e4a1",
+  "validation_type": "native_chatgpt_writeback",
+  "artifact_role": "operational_validation_only",
+  "cognition_modified": false,
+  "created_at": "2026-10-16T07:11:55Z"
+}
