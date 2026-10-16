@@ -2,9 +2,9 @@
   "schema_version": 1,
   "dataset_id": "mark-handoff-c3852d063983",
   "fixture": true,
-  "generated_at": "2026-10-16T03:00:48.422Z",
-  "latest_sequence": 3,
-  "latest_marker": "MARK-P01-48e523fc030a:B3",
+  "generated_at": "2026-10-16T07:15:04.061Z",
+  "latest_sequence": 4,
+  "latest_marker": "MARK-P01-48e523fc030a:B4",
   "coverage": "4 complete upstream documents; test-only cognition",
   "batches": [
     {
@@ -24,6 +24,12 @@
       "marker": "MARK-P01-48e523fc030a:B3",
       "path": "handoff/changes/0003.json",
       "sha256": "d4734b735132f694414e4a36bbc66ff80cc01a3e3fa9aaeeaac772bcd3fc69e0"
+    },
+    {
+      "sequence": 4,
+      "marker": "MARK-P01-48e523fc030a:B4",
+      "path": "handoff/changes/0004.json",
+      "sha256": "5e320af48bba7a9c1b1a72dabb87270e1bb24e44c970b6d69a0093234330a7a1"
     }
   ],
   "files": [
@@ -96,6 +102,11 @@
       "path": "data/thesis_versions.jsonl",
       "sha256": "ac332d78bd22cbae450573f96c0b2a88253a81189e7c3f04fc4186f97c5d4e5c",
       "byte_length": 315
+    },
+    {
+      "path": "handoff/validation/resume-event.json",
+      "sha256": "886256f9c3b9d2709d860788c022ae5ae617b97012a32938fdba3492dc3f8834",
+      "byte_length": 141
     }
   ]
 }
