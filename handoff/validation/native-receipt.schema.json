@@ -1,0 +1,52 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Native ChatGPT operational acceptance receipt",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "consumer",
+    "dataset_id",
+    "processed_through_sequence",
+    "processed_through_marker",
+    "observed_commit_sha",
+    "validation_type",
+    "artifact_role",
+    "cognition_modified",
+    "created_at"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": 1
+    },
+    "consumer": {
+      "const": "chatgpt_native"
+    },
+    "dataset_id": {
+      "const": "mark-handoff-c3852d063983"
+    },
+    "processed_through_sequence": {
+      "const": 3
+    },
+    "processed_through_marker": {
+      "const": "MARK-P01-48e523fc030a:B3"
+    },
+    "observed_commit_sha": {
+      "type": "string",
+      "pattern": "^[a-f0-9]{40}$"
+    },
+    "validation_type": {
+      "const": "native_chatgpt_writeback"
+    },
+    "artifact_role": {
+      "const": "operational_validation_only"
+    },
+    "cognition_modified": {
+      "const": false
+    },
+    "created_at": {
+      "type": "string",
+      "pattern": "^\\d{4}-\\d{2}-\\d{2}T\\d{2}:\\d{2}:\\d{2}(\\.\\d+)?Z$"
+    }
+  }
+}
