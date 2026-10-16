@@ -1,0 +1,16 @@
+{
+  "id": "web-observation-1",
+  "consumer": "mark-handoff-test",
+  "channel": "codex_web",
+  "dataset_id": "mark-handoff-c3852d063983",
+  "sequence": 1,
+  "marker": "MARK-P01-48e523fc030a:B1",
+  "processed_event_ids": [
+    "MARK-P01-48e523fc030a:event:e01",
+    "MARK-P01-48e523fc030a:event:e02",
+    "MARK-P01-48e523fc030a:edge:01"
+  ],
+  "body_hashes_verified": [],
+  "observation_ref": "https://raw.githubusercontent.com/benqazhang/mark-research-handoff-test/batch-0001/handoff/changes/0001.json",
+  "observed_at": "2026-10-16T03:00:19.529Z"
+}

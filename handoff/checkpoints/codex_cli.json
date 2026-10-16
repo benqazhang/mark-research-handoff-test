@@ -3,19 +3,21 @@
   "consumer": "mark-handoff-test",
   "channel": "codex_cli",
   "dataset_id": "mark-handoff-c3852d063983",
-  "last_sequence": 2,
-  "last_marker": "MARK-P01-48e523fc030a:B2",
+  "last_sequence": 3,
+  "last_marker": "MARK-P01-48e523fc030a:B3",
   "processed_event_ids": [
     "MARK-P01-48e523fc030a:event:e01",
     "MARK-P01-48e523fc030a:event:e02",
     "MARK-P01-48e523fc030a:edge:01",
     "MARK-P01-48e523fc030a:event:e03",
     "MARK-P01-48e523fc030a:event:e04",
-    "MARK-P01-48e523fc030a:proposal:01"
+    "MARK-P01-48e523fc030a:proposal:01",
+    "MARK-P01-48e523fc030a:resume:01"
   ],
   "receipt_refs": [
     "https://raw.githubusercontent.com/benqazhang/mark-research-handoff-test/99103b83374a68d4ded4381b95ba999a1adc6bd0/handoff/manifest.json",
-    "https://raw.githubusercontent.com/benqazhang/mark-research-handoff-test/1cea626f2256c4f160aa46055ea1c51e5441e9ef/handoff/manifest.json"
+    "https://raw.githubusercontent.com/benqazhang/mark-research-handoff-test/1cea626f2256c4f160aa46055ea1c51e5441e9ef/handoff/manifest.json",
+    "https://raw.githubusercontent.com/benqazhang/mark-research-handoff-test/08ee989568b101fe5e9b82e4469e1caa71cc8c57/handoff/manifest.json"
   ],
-  "updated_at": "2026-10-16T02:57:47.877Z"
+  "updated_at": "2026-10-16T03:00:58.916Z"
 }

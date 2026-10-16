@@ -1,0 +1,19 @@
+{
+  "id": "cli-08ee989568b101fe5e9b82e4469e1caa71cc8c57-3",
+  "consumer": "mark-handoff-test",
+  "channel": "codex_cli",
+  "dataset_id": "mark-handoff-c3852d063983",
+  "sequence": 3,
+  "marker": "MARK-P01-48e523fc030a:B3",
+  "processed_event_ids": [
+    "MARK-P01-48e523fc030a:resume:01"
+  ],
+  "body_hashes_verified": [
+    "d776beb7f1d0194da22e7d82cc84d869bd4ae805ba5d8283b69f57dec5b64dd6",
+    "4022ac26bea9d3849ed054a260f4c0f89269819e82f615056aa6dc2fb5d6696e",
+    "adf35a2b5557f96ecc3264a40fce0e71fb68f8d24feaabd60d669fa9e2fb5d4e",
+    "0046d50af0f7c0e5dfac5e933c9a2f87c99cd8d6f5faccfdad8b1a2fbba791fc"
+  ],
+  "observation_ref": "https://raw.githubusercontent.com/benqazhang/mark-research-handoff-test/08ee989568b101fe5e9b82e4469e1caa71cc8c57/handoff/manifest.json",
+  "observed_at": "2026-10-16T03:00:58.916Z"
+}
