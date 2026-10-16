@@ -23,6 +23,25 @@
       "origin": "test_seed"
     }
   ],
-  "proposals": [],
+  "proposals": [
+    {
+      "id": "proposal-handoff-01",
+      "object_id": "question-handoff",
+      "expected_current_version_id": "question-handoff-v1",
+      "thesis_version_id": "thesis-handoff-v1",
+      "statement": "Which SDK version and client-specific tests establish repository reading, explicitly approved write-back, and checkpoint recovery separately?",
+      "state": "Proposed Update",
+      "basis_evidence_ids": [
+        "e01",
+        "e02",
+        "e03"
+      ],
+      "reasoning": "The upstream README, versioning policy and roadmap describe SDK capabilities and maturity, not authorization or successful operation in Mark’s actual ChatGPT client. The proposed question separates SDK selection from client acceptance. This is an inference for a test-only Question, not a claim about Mark’s beliefs.",
+      "epistemic_status": "question",
+      "proposed_by": "Codex_assisted_fixture",
+      "created_at": "2026-10-16T02:51:40.300700Z",
+      "fixture": true
+    }
+  ],
   "decisions": []
 }

@@ -3,9 +3,15 @@
   "consumer": "mark-handoff-test",
   "channel": "codex_cli",
   "dataset_id": "mark-handoff-c3852d063983",
-  "last_sequence": 0,
-  "last_marker": null,
-  "processed_event_ids": [],
-  "receipt_refs": [],
-  "updated_at": "2026-10-16T02:51:40.300700Z"
+  "last_sequence": 1,
+  "last_marker": "MARK-P01-48e523fc030a:B1",
+  "processed_event_ids": [
+    "MARK-P01-48e523fc030a:event:e01",
+    "MARK-P01-48e523fc030a:event:e02",
+    "MARK-P01-48e523fc030a:edge:01"
+  ],
+  "receipt_refs": [
+    "https://raw.githubusercontent.com/benqazhang/mark-research-handoff-test/99103b83374a68d4ded4381b95ba999a1adc6bd0/handoff/manifest.json"
+  ],
+  "updated_at": "2026-10-16T02:57:38.333Z"
 }

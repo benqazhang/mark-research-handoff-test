@@ -3,15 +3,21 @@
   "dataset_id": "mark-handoff-c3852d063983",
   "fixture": true,
   "generated_at": "2026-10-16T02:51:40.300700Z",
-  "latest_sequence": 1,
-  "latest_marker": "MARK-P01-48e523fc030a:B1",
-  "coverage": "Four full, pinned upstream repository documents; no platform-wide collection. Cognitive records are acceptance fixtures, not Mark’s real beliefs.",
+  "latest_sequence": 2,
+  "latest_marker": "MARK-P01-48e523fc030a:B2",
+  "coverage": "4 complete upstream documents; test-only cognition",
   "batches": [
     {
       "sequence": 1,
       "marker": "MARK-P01-48e523fc030a:B1",
       "path": "handoff/changes/0001.json",
       "sha256": "03a38ffc858902aa23c31961f8f8504fa176de8e8c2a2396e7b39c1f38ddf9b4"
+    },
+    {
+      "sequence": 2,
+      "marker": "MARK-P01-48e523fc030a:B2",
+      "path": "handoff/changes/0002.json",
+      "sha256": "55ea948375d1316019a5aa8ccc9c5fe6955ad4b6690aafe676112c9d60176dc8"
     }
   ],
   "files": [
@@ -22,8 +28,8 @@
     },
     {
       "path": "data/cognition/state.json",
-      "sha256": "28609ad38ce40feca3bcedfb88fe72857f2caa910081b14272465ca846355700",
-      "byte_length": 724
+      "sha256": "a81197e2c2be33b073f740fd8bfce8a52af424dfc185de1ab3f9f5cd941bb52d",
+      "byte_length": 1703
     },
     {
       "path": "data/discovery_edges.jsonl",
@@ -51,9 +57,19 @@
       "byte_length": 3273
     },
     {
+      "path": "data/evidence/bodies/e03.md",
+      "sha256": "adf35a2b5557f96ecc3264a40fce0e71fb68f8d24feaabd60d669fa9e2fb5d4e",
+      "byte_length": 2506
+    },
+    {
+      "path": "data/evidence/bodies/e04.md",
+      "sha256": "0046d50af0f7c0e5dfac5e933c9a2f87c99cd8d6f5faccfdad8b1a2fbba791fc",
+      "byte_length": 2898
+    },
+    {
       "path": "data/evidence/index.jsonl",
-      "sha256": "346af00494a6ad8751b70b4b43b45bfde569f1041dde6920adc8b7fd16aa4fd7",
-      "byte_length": 2743
+      "sha256": "13f68a0dbf8e83b9e470b2436ea407fe32d36f427f7e39b5498f2e76d2568c75",
+      "byte_length": 5503
     },
     {
       "path": "data/evidence/source-metadata.json",

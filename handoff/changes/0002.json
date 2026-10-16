@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "dataset_id": "mark-handoff-c3852d063983",
+  "sequence": 2,
+  "previous_marker": "MARK-P01-48e523fc030a:B1",
+  "marker": "MARK-P01-48e523fc030a:B2",
+  "created_at": "2026-10-16T02:51:40.300700Z",
+  "events": [
+    {
+      "id": "MARK-P01-48e523fc030a:event:e03",
+      "kind": "evidence_added",
+      "entity_id": "e03",
+      "path": "data/evidence/index.jsonl"
+    },
+    {
+      "id": "MARK-P01-48e523fc030a:event:e04",
+      "kind": "evidence_added",
+      "entity_id": "e04",
+      "path": "data/evidence/index.jsonl"
+    },
+    {
+      "id": "MARK-P01-48e523fc030a:proposal:01",
+      "kind": "cognitive_proposed",
+      "entity_id": "proposal-handoff-01",
+      "path": "data/cognition/state.json"
+    }
+  ]
+}
