@@ -1,0 +1,11 @@
+{
+  "schema_version": 1,
+  "consumer": "mark-handoff-test",
+  "channel": "codex_web",
+  "dataset_id": "mark-handoff-c3852d063983",
+  "last_sequence": 0,
+  "last_marker": null,
+  "processed_event_ids": [],
+  "receipt_refs": [],
+  "updated_at": "2026-10-16T02:51:40.300700Z"
+}

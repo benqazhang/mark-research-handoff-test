@@ -1,0 +1,14 @@
+{
+  "source_url": "https://api.github.com/repos/modelcontextprotocol/typescript-sdk",
+  "collected_at": "2026-10-16T02:51:40.300700Z",
+  "fields": {
+    "full_name": "modelcontextprotocol/typescript-sdk",
+    "html_url": "https://github.com/modelcontextprotocol/typescript-sdk",
+    "owner": {
+      "login": "modelcontextprotocol",
+      "id": 182288589,
+      "html_url": "https://github.com/modelcontextprotocol",
+      "type": "Organization"
+    }
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "current": {
+    "question-handoff": "question-handoff-v1"
+  },
+  "versions": [
+    {
+      "id": "question-handoff-v1",
+      "object_id": "question-handoff",
+      "version": 1,
+      "previous_version_id": null,
+      "thesis_id": "thesis-handoff",
+      "thesis_version_id": "thesis-handoff-v1",
+      "kind": "Question",
+      "statement": "Does choosing an official MCP SDK establish that our ChatGPT repository handoff is ready?",
+      "state": "Current",
+      "basis_evidence_ids": [
+        "e01"
+      ],
+      "created_at": "2026-10-16T02:51:40.300700Z",
+      "decision_ref": null,
+      "fixture": true,
+      "origin": "test_seed"
+    }
+  ],
+  "proposals": [],
+  "decisions": []
+}

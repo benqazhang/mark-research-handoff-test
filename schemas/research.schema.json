@@ -1,0 +1,997 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://mark-research.invalid/schema/v1",
+  "$defs": {
+    "source": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "platform": {
+          "type": "string",
+          "minLength": 1
+        },
+        "native_id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "name": {
+          "type": "string",
+          "minLength": 1
+        },
+        "url": {
+          "type": "string",
+          "minLength": 1
+        },
+        "kind": {
+          "enum": [
+            "person",
+            "organization",
+            "repository",
+            "channel",
+            "podcast"
+          ]
+        },
+        "qualification": {
+          "enum": [
+            "seed",
+            "candidate",
+            "qualified",
+            "rejected"
+          ]
+        },
+        "qualification_decision_ref": {
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      },
+      "required": [
+        "id",
+        "platform",
+        "native_id",
+        "name",
+        "url",
+        "kind",
+        "qualification",
+        "qualification_decision_ref"
+      ],
+      "additionalProperties": false
+    },
+    "thesisVersion": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "thesis_id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "version": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "previous_version_id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "question": {
+          "type": "string",
+          "minLength": 1
+        },
+        "state": {
+          "enum": [
+            "Current",
+            "Proposed Update",
+            "Challenged",
+            "Retired"
+          ]
+        },
+        "created_at": {
+          "type": "string",
+          "minLength": 1
+        },
+        "decision_ref": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "fixture": {
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "id",
+        "thesis_id",
+        "version",
+        "previous_version_id",
+        "question",
+        "state",
+        "created_at",
+        "decision_ref",
+        "fixture"
+      ],
+      "additionalProperties": false
+    },
+    "thesis": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "current_version_id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "status": {
+          "enum": [
+            "active",
+            "paused",
+            "retired"
+          ]
+        }
+      },
+      "required": [
+        "id",
+        "current_version_id",
+        "status"
+      ],
+      "additionalProperties": false
+    },
+    "evidence": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "revision": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "platform": {
+          "type": "string",
+          "minLength": 1
+        },
+        "native_id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "source_id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "author": {
+          "type": "object",
+          "properties": {
+            "name": {
+              "type": "string",
+              "minLength": 1
+            },
+            "source_id": {
+              "type": "string",
+              "minLength": 1
+            },
+            "role": {
+              "enum": [
+                "publisher",
+                "author"
+              ]
+            }
+          },
+          "required": [
+            "name",
+            "source_id",
+            "role"
+          ],
+          "additionalProperties": false
+        },
+        "title": {
+          "type": "string",
+          "minLength": 1
+        },
+        "source_url": {
+          "type": "string",
+          "minLength": 1
+        },
+        "canonical_url": {
+          "type": "string",
+          "minLength": 1
+        },
+        "source_commit": {
+          "type": "string",
+          "minLength": 1
+        },
+        "published_at": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "published_at_missing_reason": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "source_updated_at": {
+          "type": "string",
+          "minLength": 1
+        },
+        "collected_at": {
+          "type": "string",
+          "minLength": 1
+        },
+        "content_kind": {
+          "enum": [
+            "repository_document",
+            "post",
+            "video",
+            "podcast",
+            "paper"
+          ]
+        },
+        "body_path": {
+          "type": "string",
+          "minLength": 1
+        },
+        "sha256": {
+          "type": "string",
+          "pattern": "^[a-f0-9]{64}$"
+        },
+        "byte_length": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "completeness": {
+          "enum": [
+            "full",
+            "partial",
+            "metadata_only"
+          ]
+        },
+        "transcript_path": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "transcript_missing_reason": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "acquisition_method": {
+          "type": "string",
+          "minLength": 1
+        },
+        "retention_policy": {
+          "type": "string",
+          "minLength": 1
+        },
+        "attribution_path": {
+          "type": "string",
+          "minLength": 1
+        },
+        "discovery_edge_ids": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          }
+        }
+      },
+      "required": [
+        "id",
+        "revision",
+        "platform",
+        "native_id",
+        "source_id",
+        "author",
+        "title",
+        "source_url",
+        "canonical_url",
+        "source_commit",
+        "published_at",
+        "published_at_missing_reason",
+        "source_updated_at",
+        "collected_at",
+        "content_kind",
+        "body_path",
+        "sha256",
+        "byte_length",
+        "completeness",
+        "transcript_path",
+        "transcript_missing_reason",
+        "acquisition_method",
+        "retention_policy",
+        "attribution_path",
+        "discovery_edge_ids"
+      ],
+      "additionalProperties": false
+    },
+    "edge": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "from_id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "to_id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "relationship": {
+          "enum": [
+            "mentions",
+            "guest",
+            "author",
+            "repo_owner",
+            "contributor",
+            "quotes",
+            "forwards",
+            "linked_paper_author",
+            "external_link"
+          ]
+        },
+        "basis_evidence_ids": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "observed_url": {
+          "type": "string",
+          "minLength": 1
+        },
+        "locator": {
+          "type": "string",
+          "minLength": 1
+        },
+        "observed_value": {
+          "type": "string",
+          "minLength": 1
+        },
+        "observed_at": {
+          "type": "string",
+          "minLength": 1
+        },
+        "extraction_method": {
+          "enum": [
+            "explicit_api_field",
+            "explicit_link",
+            "explicit_structured_field"
+          ]
+        },
+        "qualification": {
+          "enum": [
+            "unreviewed",
+            "accepted",
+            "rejected"
+          ]
+        },
+        "decision_ref": {
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      },
+      "required": [
+        "id",
+        "from_id",
+        "to_id",
+        "relationship",
+        "basis_evidence_ids",
+        "observed_url",
+        "locator",
+        "observed_value",
+        "observed_at",
+        "extraction_method",
+        "qualification",
+        "decision_ref"
+      ],
+      "additionalProperties": false
+    },
+    "version": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "object_id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "version": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "previous_version_id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "thesis_id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "thesis_version_id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "kind": {
+          "enum": [
+            "Belief",
+            "Hypothesis",
+            "Question",
+            "Practice"
+          ]
+        },
+        "statement": {
+          "type": "string",
+          "minLength": 1
+        },
+        "state": {
+          "enum": [
+            "Current",
+            "Proposed Update",
+            "Challenged",
+            "Retired"
+          ]
+        },
+        "basis_evidence_ids": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "created_at": {
+          "type": "string",
+          "minLength": 1
+        },
+        "decision_ref": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "fixture": {
+          "type": "boolean"
+        },
+        "origin": {
+          "enum": [
+            "test_seed",
+            "mark_decision"
+          ]
+        }
+      },
+      "required": [
+        "id",
+        "object_id",
+        "version",
+        "previous_version_id",
+        "thesis_id",
+        "thesis_version_id",
+        "kind",
+        "statement",
+        "state",
+        "basis_evidence_ids",
+        "created_at",
+        "decision_ref",
+        "fixture",
+        "origin"
+      ],
+      "additionalProperties": false
+    },
+    "proposal": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "object_id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "expected_current_version_id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "thesis_version_id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "statement": {
+          "type": "string",
+          "minLength": 1
+        },
+        "state": {
+          "enum": [
+            "Proposed Update"
+          ]
+        },
+        "basis_evidence_ids": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "reasoning": {
+          "type": "string",
+          "minLength": 1
+        },
+        "epistemic_status": {
+          "enum": [
+            "inference",
+            "question"
+          ]
+        },
+        "proposed_by": {
+          "enum": [
+            "Codex_assisted_fixture",
+            "ChatGPT",
+            "Mark"
+          ]
+        },
+        "created_at": {
+          "type": "string",
+          "minLength": 1
+        },
+        "fixture": {
+          "const": true
+        }
+      },
+      "required": [
+        "id",
+        "object_id",
+        "expected_current_version_id",
+        "thesis_version_id",
+        "statement",
+        "state",
+        "basis_evidence_ids",
+        "reasoning",
+        "epistemic_status",
+        "proposed_by",
+        "created_at",
+        "fixture"
+      ],
+      "additionalProperties": false
+    },
+    "decision": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "proposal_id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "proposal_sha256": {
+          "type": "string",
+          "pattern": "^[a-f0-9]{64}$"
+        },
+        "expected_current_version_id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "actor": {
+          "const": "Mark"
+        },
+        "action": {
+          "enum": [
+            "approve",
+            "reject"
+          ]
+        },
+        "verbatim": {
+          "type": "string",
+          "minLength": 1
+        },
+        "confirmation_ref": {
+          "type": "string",
+          "minLength": 1
+        },
+        "decided_at": {
+          "type": "string",
+          "minLength": 1
+        },
+        "result_version_id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      },
+      "required": [
+        "id",
+        "proposal_id",
+        "proposal_sha256",
+        "expected_current_version_id",
+        "actor",
+        "action",
+        "verbatim",
+        "confirmation_ref",
+        "decided_at",
+        "result_version_id"
+      ],
+      "additionalProperties": false
+    },
+    "cognition": {
+      "type": "object",
+      "properties": {
+        "schema_version": {
+          "const": 1
+        },
+        "current": {
+          "type": "object",
+          "additionalProperties": {
+            "type": "string"
+          }
+        },
+        "versions": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/version"
+          }
+        },
+        "proposals": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/proposal"
+          }
+        },
+        "decisions": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/decision"
+          }
+        }
+      },
+      "required": [
+        "schema_version",
+        "current",
+        "versions",
+        "proposals",
+        "decisions"
+      ],
+      "additionalProperties": false
+    },
+    "event": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "kind": {
+          "enum": [
+            "evidence_added",
+            "evidence_revised",
+            "evidence_withdrawn",
+            "source_discovered",
+            "cognitive_proposed",
+            "cognitive_decided",
+            "validation_ping"
+          ]
+        },
+        "entity_id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "path": {
+          "type": "string",
+          "minLength": 1
+        }
+      },
+      "required": [
+        "id",
+        "kind",
+        "entity_id",
+        "path"
+      ],
+      "additionalProperties": false
+    },
+    "batch": {
+      "type": "object",
+      "properties": {
+        "schema_version": {
+          "const": 1
+        },
+        "dataset_id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "sequence": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "previous_marker": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "marker": {
+          "type": "string",
+          "minLength": 1
+        },
+        "created_at": {
+          "type": "string",
+          "minLength": 1
+        },
+        "events": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/event"
+          }
+        }
+      },
+      "required": [
+        "schema_version",
+        "dataset_id",
+        "sequence",
+        "previous_marker",
+        "marker",
+        "created_at",
+        "events"
+      ],
+      "additionalProperties": false
+    },
+    "file": {
+      "type": "object",
+      "properties": {
+        "path": {
+          "type": "string",
+          "minLength": 1
+        },
+        "sha256": {
+          "type": "string",
+          "pattern": "^[a-f0-9]{64}$"
+        },
+        "byte_length": {
+          "type": "integer",
+          "minimum": 0
+        }
+      },
+      "required": [
+        "path",
+        "sha256",
+        "byte_length"
+      ],
+      "additionalProperties": false
+    },
+    "manifest": {
+      "type": "object",
+      "properties": {
+        "schema_version": {
+          "const": 1
+        },
+        "dataset_id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "fixture": {
+          "const": true
+        },
+        "generated_at": {
+          "type": "string",
+          "minLength": 1
+        },
+        "latest_sequence": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "latest_marker": {
+          "type": "string",
+          "minLength": 1
+        },
+        "coverage": {
+          "type": "string",
+          "minLength": 1
+        },
+        "batches": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "sequence": {
+                "type": "integer",
+                "minimum": 1
+              },
+              "marker": {
+                "type": "string",
+                "minLength": 1
+              },
+              "path": {
+                "type": "string",
+                "minLength": 1
+              },
+              "sha256": {
+                "type": "string",
+                "minLength": 1
+              }
+            },
+            "required": [
+              "sequence",
+              "marker",
+              "path",
+              "sha256"
+            ],
+            "additionalProperties": false
+          }
+        },
+        "files": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/file"
+          }
+        }
+      },
+      "required": [
+        "schema_version",
+        "dataset_id",
+        "fixture",
+        "generated_at",
+        "latest_sequence",
+        "latest_marker",
+        "coverage",
+        "batches",
+        "files"
+      ],
+      "additionalProperties": false
+    },
+    "checkpoint": {
+      "type": "object",
+      "properties": {
+        "schema_version": {
+          "const": 1
+        },
+        "consumer": {
+          "type": "string",
+          "minLength": 1
+        },
+        "channel": {
+          "enum": [
+            "codex_cli",
+            "codex_web",
+            "chatgpt_native"
+          ]
+        },
+        "dataset_id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "last_sequence": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "last_marker": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "processed_event_ids": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "receipt_refs": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "updated_at": {
+          "type": "string",
+          "minLength": 1
+        }
+      },
+      "required": [
+        "schema_version",
+        "consumer",
+        "channel",
+        "dataset_id",
+        "last_sequence",
+        "last_marker",
+        "processed_event_ids",
+        "receipt_refs",
+        "updated_at"
+      ],
+      "additionalProperties": false
+    },
+    "receipt": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "consumer": {
+          "type": "string",
+          "minLength": 1
+        },
+        "channel": {
+          "enum": [
+            "codex_cli",
+            "codex_web",
+            "chatgpt_native"
+          ]
+        },
+        "dataset_id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "sequence": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "marker": {
+          "type": "string",
+          "minLength": 1
+        },
+        "processed_event_ids": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "body_hashes_verified": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "observation_ref": {
+          "type": "string",
+          "minLength": 1
+        },
+        "observed_at": {
+          "type": "string",
+          "minLength": 1
+        }
+      },
+      "required": [
+        "id",
+        "consumer",
+        "channel",
+        "dataset_id",
+        "sequence",
+        "marker",
+        "processed_event_ids",
+        "body_hashes_verified",
+        "observation_ref",
+        "observed_at"
+      ],
+      "additionalProperties": false
+    }
+  }
+}

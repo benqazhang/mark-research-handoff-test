@@ -1,0 +1,79 @@
+{
+  "schema_version": 1,
+  "dataset_id": "mark-handoff-c3852d063983",
+  "fixture": true,
+  "generated_at": "2026-10-16T02:51:40.300700Z",
+  "latest_sequence": 1,
+  "latest_marker": "MARK-P01-48e523fc030a:B1",
+  "coverage": "Four full, pinned upstream repository documents; no platform-wide collection. Cognitive records are acceptance fixtures, not Mark’s real beliefs.",
+  "batches": [
+    {
+      "sequence": 1,
+      "marker": "MARK-P01-48e523fc030a:B1",
+      "path": "handoff/changes/0001.json",
+      "sha256": "03a38ffc858902aa23c31961f8f8504fa176de8e8c2a2396e7b39c1f38ddf9b4"
+    }
+  ],
+  "files": [
+    {
+      "path": "config/theses.json",
+      "sha256": "6e2670cde6847a51b3ffbb4ac9d63208623f8a8e84994d1f3e37a9818d82d18a",
+      "byte_length": 110
+    },
+    {
+      "path": "data/cognition/state.json",
+      "sha256": "28609ad38ce40feca3bcedfb88fe72857f2caa910081b14272465ca846355700",
+      "byte_length": 724
+    },
+    {
+      "path": "data/discovery_edges.jsonl",
+      "sha256": "4a323367a10bba65d553db16aae4d6a7c7dbc83f79d393d2ac018589257b7d1c",
+      "byte_length": 487
+    },
+    {
+      "path": "data/evidence/ATTRIBUTION.md",
+      "sha256": "a8bc77211ffb91e3730fd4605f29c49fc63646946c1a1ec68ff47c092967803a",
+      "byte_length": 653
+    },
+    {
+      "path": "data/evidence/UPSTREAM_LICENSE.txt",
+      "sha256": "0382b0057770ca05e9c350a50aa3b1c1fea84da0bc81d723bf00b9aa841be58a",
+      "byte_length": 12227
+    },
+    {
+      "path": "data/evidence/bodies/e01.md",
+      "sha256": "d776beb7f1d0194da22e7d82cc84d869bd4ae805ba5d8283b69f57dec5b64dd6",
+      "byte_length": 8317
+    },
+    {
+      "path": "data/evidence/bodies/e02.md",
+      "sha256": "4022ac26bea9d3849ed054a260f4c0f89269819e82f615056aa6dc2fb5d6696e",
+      "byte_length": 3273
+    },
+    {
+      "path": "data/evidence/index.jsonl",
+      "sha256": "346af00494a6ad8751b70b4b43b45bfde569f1041dde6920adc8b7fd16aa4fd7",
+      "byte_length": 2743
+    },
+    {
+      "path": "data/evidence/source-metadata.json",
+      "sha256": "c55488685953b2112e7a3c205eacd286aa6884e8e9fdd2364e09bf9f7cc81bf9",
+      "byte_length": 458
+    },
+    {
+      "path": "data/source_candidates.jsonl",
+      "sha256": "cbec6eb1ccf87b5b75c336c08d8e29a36ac04d9d2b75203944315f9d8cca130b",
+      "byte_length": 255
+    },
+    {
+      "path": "data/sources.jsonl",
+      "sha256": "779e63eccaba7e2d100dd4cbac653263e2e0b554bdd4216710988ae377048150",
+      "byte_length": 282
+    },
+    {
+      "path": "data/thesis_versions.jsonl",
+      "sha256": "ac332d78bd22cbae450573f96c0b2a88253a81189e7c3f04fc4186f97c5d4e5c",
+      "byte_length": 315
+    }
+  ]
+}

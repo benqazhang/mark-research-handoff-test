@@ -1,0 +1,3 @@
+# Attribution
+
+Four unmodified full documents from https://github.com/modelcontextprotocol/typescript-sdk, revision `9bc40e903fde15534ec06ff4c1347d47000dbe16`, collected 2026-10-16T02:51:40.300700Z. Publisher: Model Context Protocol project contributors. Documentation is described by the included upstream LICENSE as CC-BY-4.0 (https://creativecommons.org/licenses/by/4.0/). The project also describes a code licensing transition; do not infer a blanket license from an API SPDX field. See UPSTREAM_LICENSE.txt for the exact notice. Each evidence record includes the original pinned URL, byte length and SHA-256. No affiliation or endorsement implied.
